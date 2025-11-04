@@ -4,7 +4,7 @@ import { DotScreenShader } from "@/components/ui/dot-shader-background";
 export default function Home() {
   return (
     <>
-      <div className="h-svh w-screen flex flex-col gap-8 items-center justify-center relative">
+      <div className="h-svh w-screen flex flex-col gap-4 md:gap-6 items-center justify-center relative px-4">
         <div className="absolute inset-0">
           <DotScreenShader />
         </div>
