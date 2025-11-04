@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "motion/react";
-import { Folder, HeartHandshakeIcon, SparklesIcon } from "lucide-react";
+import { SparklesIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import LoginPage from "../login-page";
 
@@ -15,10 +15,6 @@ interface DatabaseWithRestApiProps {
     third: string;
     fourth: string;
   };
-  buttonTexts?: {
-    first: string;
-    second: string;
-  };
   title?: string;
   lightColor?: string;
 }
@@ -27,14 +23,13 @@ const DatabaseWithRestApi = ({
   className,
   circleText,
   badgeTexts,
-  buttonTexts,
   title,
   lightColor,
 }: DatabaseWithRestApiProps) => {
   return (
     <div
       className={cn(
-        "relative flex h-[750px] w-full max-w-[500px]  ",
+        "relative flex h-[700px] w-full max-w-[520px]",
         className
       )}
     >
@@ -237,7 +232,7 @@ const DatabaseWithRestApi = ({
         </defs>
       </svg>
       {/* Main Box */}
-      <div className="absolute bottom-10 flex w-full flex-col items-center ">
+      <div className="absolute bottom-10 flex w-full flex-col items-center">
         {/* bottom shadow */}
         <div className="absolute -bottom-4 h-[100px] w-[62%] rounded-lg bg-accent/30 " />
         {/* box title */}
@@ -252,10 +247,10 @@ const DatabaseWithRestApi = ({
           {circleText ? circleText : "KUMA"}
         </div>
         {/* box content */}
-        <div className="relative z-10 flex h-[350px] w-full items-center justify-center overflow-hidden rounded-lg border bg-[#101112] shadow-md">
+        <div className="relative z-10 w-full overflow-hidden rounded-lg border bg-[#101112] shadow-md">
           {/* FORMS */}
-          
-          <LoginPage/>
+
+          <LoginPage />
           {/* Circles */}
           <motion.div
             className="absolute -bottom-14 h-[100px] w-[100px] rounded-full border-t bg-accent/5"
